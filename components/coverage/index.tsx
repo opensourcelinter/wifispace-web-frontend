@@ -1,5 +1,13 @@
-export default function CoveragePage() { 
-    return ( 
-        <div>Coverage page</div>
-    )
+import Footer from "../footer";
+import CoveragePage from "./coverage-page";
+
+export default function Coverage() {
+  return (
+    <>
+      <main className="min-h-screen">
+        <CoveragePage />
+      </main>
+      <Footer />
+    </>
+  );
 }
