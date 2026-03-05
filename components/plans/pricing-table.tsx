@@ -10,9 +10,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 import { Check, Laptop, Smartphone, Tv, X } from "lucide-react";
 
-interface ComparisonTableProps {
+interface Props {
   plans: typeof plans;
   billingPeriod: "monthly" | "quarterly" | "annual";
 }
@@ -23,9 +24,9 @@ const discounts = {
   annual: 0.8,
 };
 
-export default function ComparisonTable(props: ComparisonTableProps) {
+export default function PricingTable(props: Props) {
   const { plans, billingPeriod } = props;
-  
+
   const getPrice = (monthly: number) =>
     Math.round(monthly * discounts[billingPeriod]);
 
@@ -59,7 +60,7 @@ export default function ComparisonTable(props: ComparisonTableProps) {
               <span className="font-medium">4-8</span>
             </>
           ) : (
-            <span className="font-medium">1–3</span>
+            <span className="font-medium">1-3</span>
           )}
         </div>
       ),
@@ -87,18 +88,24 @@ export default function ComparisonTable(props: ComparisonTableProps) {
         <Table className="relative min-w-225 table-fixed">
           <TableHeader className="bg-gray-50/80 dark:bg-gray-900/60 backdrop-blur-sm sticky top-0 z-10">
             <TableRow className="border-b hover:bg-transparent">
-              <TableHead className="sticky left-0 z-20 bg-gray-50/80 dark:bg-gray-900/60 backdrop-blur-sm w-56 font-semibold text-gray-900 dark:text-gray-100 border-r">
+              <TableHead
+                className={cn(
+                  "sticky left-0 z-30 min-w-55 max-w-65 bg-background/95 backdrop-blur-md",
+                  "font-semibold text-foreground border-r shadow-[2px_0_8px_-4px_rgba(0,0,0,0.08)] dark:shadow-[2px_0_8px_-4px_rgba(0,0,0,0.4)]",
+                )}
+              >
                 Feature
               </TableHead>
 
               {plans.map((plan) => (
                 <TableHead
                   key={plan.name}
-                  className={`text-center font-bold text-base sm:text-lg transition-colors ${
+                  className={cn(
+                    "text-center font-semibold text-base md:text-lg transition-all",
                     plan.popular
-                      ? "bg-indigo-50/70 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300"
-                      : "text-gray-700 dark:text-gray-300"
-                  }`}
+                      ? "bg-linear-to-b from-indigo-50/80 to-indigo-50/40 dark:from-indigo-950/40 dark:to-indigo-950/20 text-indigo-700 dark:text-indigo-300 relative"
+                      : "text-muted-foreground",
+                  )}
                 >
                   <div className="flex flex-col items-center gap-1">
                     {plan.name}
@@ -120,25 +127,31 @@ export default function ComparisonTable(props: ComparisonTableProps) {
             {tableRows.map((row, rowIndex) => (
               <TableRow
                 key={row.label}
-                className={`
-                  border-b last:border-none
-                  hover:bg-gray-50/70 dark:hover:bg-gray-800/40
-                  transition-colors
-                  ${rowIndex % 2 === 0 ? "bg-white dark:bg-gray-950" : "bg-gray-50/40 dark:bg-gray-900/40"}
-                `}
+                className={cn(
+                  "border-b last:border-none transition-colors",
+                  rowIndex % 2 === 0
+                    ? "bg-background"
+                    : "bg-muted/30 dark:bg-muted/20",
+                  "hover:bg-muted/60 dark:hover:bg-muted/40",
+                )}
               >
-                <TableCell className="sticky left-0 z-10 bg-inherit font-medium text-gray-900 dark:text-gray-100 border-r whitespace-nowrap">
+                <TableCell
+                  className={cn(
+                    "sticky left-0 z-10 min-w-55 max-w-65 bg-inherit font-medium text-foreground",
+                    "border-r shadow-[2px_0_6px_-3px_rgba(0,0,0,0.06)] dark:shadow-[2px_0_6px_-3px_rgba(255,255,255,0.05)]",
+                    "whitespace-nowrap",
+                  )}
+                >
                   {row.label}
                 </TableCell>
 
                 {plans.map((plan) => (
                   <TableCell
                     key={plan.name}
-                    className={`text-center py-4 ${
-                      plan.popular
-                        ? "bg-indigo-50/30 dark:bg-indigo-950/20"
-                        : ""
-                    }`}
+                    className={cn(
+                      "text-center py-5 text-base",
+                      plan.popular && "bg-indigo-50/20 dark:bg-indigo-950/15",
+                    )}
                   >
                     {row.render
                       ? row.render(plan)

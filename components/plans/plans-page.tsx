@@ -5,11 +5,11 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
 import AddOnsSection from "./addon";
-import ComparisonTable from "./comparison-table";
 import CTAButton from "./cta";
 import FrequentRequests from "./frequent-requests";
 import PlanHero from "./hero";
 import PlanCard from "./plan-card";
+import PricingTable from "./pricing-table";
 
 type Billing = "monthly" | "quarterly" | "annual";
 
@@ -18,9 +18,9 @@ export default function PlansPage() {
 
   return (
     <main className="min-h-screen bg-light">
-      <PlanHero /> 
+      <PlanHero />
 
-      <section className="py-10 bg-white sticky top-0 z-10 shadow-sm">
+      <section className="py-10 bg-white sticky top-15 z-10 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-6">
           <Label htmlFor="billing-toggle" className="text-lg font-medium">
             Billing Period
@@ -38,6 +38,7 @@ export default function PlansPage() {
             <div className="flex items-center space-x-2">
               <Switch
                 id="billing-toggle"
+                className="cursor-pointer"
                 checked={billingPeriod !== "monthly"}
                 onCheckedChange={(checked) =>
                   setBillingPeriod(
@@ -86,7 +87,7 @@ export default function PlansPage() {
         </div>
       </section>
 
-      <ComparisonTable plans={plans} billingPeriod={billingPeriod} />
+      <PricingTable plans={plans} billingPeriod={billingPeriod} />
 
       <AddOnsSection />
 
