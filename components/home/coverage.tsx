@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import {
-    AlertTriangle,
-    CheckCircle2,
-    Clock,
-    Loader2,
-    MapPin,
+  AlertTriangle,
+  CheckCircle2,
+  Clock,
+  Loader2,
+  MapPin,
+  MessageCircle,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -160,6 +161,24 @@ export default function CoverageCheck() {
               <Button asChild size="lg" className="w-full sm:w-auto min-w-45">
                 <a href="/plans">View Available Plans</a>
               </Button>
+
+              {result.type === "unavailable" ||
+                (result.type === "pending" && (
+                  <Button
+                    asChild
+                    size="lg"
+                    className="w-full sm:w-auto min-w-50 gap-2 bg-[#25D366] hover:bg-[#20bd5f] text-white shadow-sm"
+                  >
+                    <a
+                      href="https://wa.me/+2348144872744?text=Hi%20there%2C%20I%20have%20a%20question%20about%20your%20services"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <MessageCircle />
+                      Chat on WhatsApp
+                    </a>
+                  </Button>
+                ))}
             </div>
           </motion.div>
         )}
