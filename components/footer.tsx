@@ -46,6 +46,7 @@ export default function Footer() {
                 { href: "/plans", label: "Plans & Pricing" },
                 { href: "/services", label: "Services" },
                 { href: "/about", label: "About Us" },
+                { href: "/contact", label: "Contact" },
               ].map((item) => (
                 <Link
                   key={item.href}
