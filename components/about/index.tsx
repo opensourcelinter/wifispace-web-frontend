@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Footer from "../footer";
+import MilestonesStats from "./milestone";
 
 export default function AboutPage() {
   const values = [
@@ -117,7 +118,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* What Makes Us Different */}
+        <MilestonesStats />
+
         <section className="py-16 md:py-24 px-6">
           <div className="max-w-5xl mx-auto">
             <motion.h2
