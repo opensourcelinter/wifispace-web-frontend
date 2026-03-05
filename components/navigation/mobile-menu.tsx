@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface MobileMenuProps {
-  links: { href: string; label: string }[];
+  links: { href: string; title: string }[];
   pathname: string;
   onClose?: () => void;
 }
@@ -34,7 +34,7 @@ export default function MobileMenu({
                       : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/70",
                   )}
                 >
-                  {link.label}
+                  {link.title}
                   {isActive && (
                     <span className="absolute left-2 top-1/2 -translate-y-1/2 w-1.5 h-8 bg-primary rounded-r-full" />
                   )}

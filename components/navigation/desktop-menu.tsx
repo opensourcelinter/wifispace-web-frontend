@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface DesktopMenuProps {
-  links: { href: string; label: string }[];
+  links: { href: string; title: string }[];
   pathname: string;
 }
 
@@ -36,7 +36,7 @@ export default function DesktopMenu({ links, pathname }: DesktopMenuProps) {
               )}
             />
 
-            {link.label}
+            {link.title}
           </Link>
         );
       })}
