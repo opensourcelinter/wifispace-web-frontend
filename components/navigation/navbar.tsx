@@ -17,11 +17,12 @@ import DesktopMenu from "./desktop-menu";
 import MobileMenu from "./mobile-menu";
 import WhatsAppFab from "./whatsapp-fab";
 
-interface Props {
-  route: { href: string; title: string }[];
+export interface NavigationProps {
+  links: { href: string; title: string }[];
+  pathname?: string;
 }
 
-export default function Navbar({ route }: Props) {
+export default function Navbar({ links }: NavigationProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -56,7 +57,7 @@ export default function Navbar({ route }: Props) {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <DesktopMenu links={route} pathname={pathname} />
+            <DesktopMenu links={links} pathname={pathname} />
             <Button asChild size="lg" className="rounded-full px-8">
               <Link href="/coverage">Check Coverage</Link>
             </Button>
@@ -73,7 +74,7 @@ export default function Navbar({ route }: Props) {
                 <SheetHeader>
                   <SheetTitle>WifiSpace</SheetTitle>
                 </SheetHeader>
-                <MobileMenu links={route} pathname={pathname} />
+                <MobileMenu links={links} pathname={pathname} />
               </SheetContent>
             </Sheet>
           </div>

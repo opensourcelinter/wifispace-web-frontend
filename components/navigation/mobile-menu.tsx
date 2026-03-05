@@ -2,20 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { SheetClose } from "@/components/ui/sheet";
+import { WHATSAPP_HOTLINE } from "@/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { NavigationProps } from "./navbar";
 
-interface MobileMenuProps {
-  links: { href: string; title: string }[];
-  pathname: string;
-  onClose?: () => void;
-}
-
-export default function MobileMenu({
-  links,
-  pathname,
-  onClose,
-}: MobileMenuProps) {
+export default function MobileMenu({ links, pathname }: NavigationProps) {
   return (
     <div className="flex flex-col h-dvh overflow-hidden bg-linear-to-b from-white to-slate-50/80 dark:from-gray-950 dark:to-gray-900">
       <div className="flex-1 overflow-y-auto overscroll-y-contain px-5 py-10">
@@ -65,7 +57,7 @@ export default function MobileMenu({
               asChild
             >
               <a
-                href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace"
+                href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

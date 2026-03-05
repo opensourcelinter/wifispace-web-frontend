@@ -8,6 +8,7 @@ import { Star } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 import testimonials from "@/app/data/testimonials.json";
+import { WHATSAPP_HOTLINE } from "@/constants";
 
 export default function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -151,7 +152,7 @@ export default function Testimonials() {
           </p>
 
           <a
-            href="https://wa.me/+2348144872744?text=Hi%20WifiSpace%2C%20I'd%20like%20to%20share%20my%20experience"
+            href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I'd%20like%20to%20share%20my%20experience`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-lg transition-colors hover:underline underline-offset-4"

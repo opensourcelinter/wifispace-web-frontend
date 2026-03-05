@@ -10,13 +10,14 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
+import { WHATSAPP_HOTLINE } from "@/constants";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import AddOnsSection from "./addon";
 import ComparisonTable from "./comparison-table";
 import PlanCard from "./plan-card";
-import AddOnsSection from "./addon";
 
 export default function PlansPage() {
   const [billingPeriod, setBillingPeriod] = useState<
@@ -190,7 +191,9 @@ export default function PlansPage() {
             size="lg"
             className="text-lg rounded-full px-10 border-primary text-primary"
           >
-            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20help%20me%20choose%20a%20plan">
+            <a
+              href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20help%20me%20choose%20a%20plan`}
+            >
               Chat on WhatsApp
             </a>
           </Button>

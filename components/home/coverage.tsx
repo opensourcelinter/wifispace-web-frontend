@@ -15,6 +15,7 @@ import { AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { WHATSAPP_HOTLINE } from "@/constants";
 
 interface CoverageResult {
   type: "success" | "pending" | "unavailable";
@@ -162,23 +163,22 @@ export default function CoverageCheck() {
                 <a href="/plans">View Available Plans</a>
               </Button>
 
-              {result.type === "unavailable" ||
-                (result.type === "pending" && (
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full sm:w-auto min-w-50 gap-2 bg-[#25D366] hover:bg-[#20bd5f] text-white shadow-sm"
+              {(result.type === "pending" || result.type === "unavailable") && (
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-auto min-w-50 gap-2 bg-[#25D366] hover:bg-[#20bd5f] text-white shadow-sm"
+                >
+                  <a
+                    href={`${WHATSAPP_HOTLINE}?text=Hi%20there%2C%20I%20have%20a%20question%20about%20your%20services`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://wa.me/+2348144872744?text=Hi%20there%2C%20I%20have%20a%20question%20about%20your%20services"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MessageCircle />
-                      Chat on WhatsApp
-                    </a>
-                  </Button>
-                ))}
+                    <MessageCircle />
+                    Chat on WhatsApp
+                  </a>
+                </Button>
+              )}
             </div>
           </motion.div>
         )}

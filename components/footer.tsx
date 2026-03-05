@@ -1,5 +1,6 @@
 "use client";
 
+import { WHATSAPP_HOTLINE } from "@/constants";
 import {
   Facebook,
   Instagram,
@@ -62,7 +63,7 @@ export default function Footer({ route }: Props) {
             </h4>
             <div className="flex flex-col space-y-4 text-neutral-400">
               <a
-                href="https://wa.me/+2348144872744"
+                href={WHATSAPP_HOTLINE}
                 className="flex items-center gap-2 hover:text-muted-foreground transition-colors duration-200"
               >
                 <MessageCircle className="h-5 w-5 text-green-500" />

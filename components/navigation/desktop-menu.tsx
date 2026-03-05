@@ -2,13 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { NavigationProps } from "./navbar";
 
-interface DesktopMenuProps {
-  links: { href: string; title: string }[];
-  pathname: string;
-}
-
-export default function DesktopMenu({ links, pathname }: DesktopMenuProps) {
+export default function DesktopMenu({ links, pathname }: NavigationProps) {
   return (
     <nav className="flex items-center gap-1 md:gap-2 lg:gap-6">
       {links.map((link) => {

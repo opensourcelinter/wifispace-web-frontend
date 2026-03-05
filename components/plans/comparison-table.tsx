@@ -23,10 +23,9 @@ const discounts = {
   annual: 0.8,
 };
 
-export default function ComparisonTable({
-  plans,
-  billingPeriod,
-}: ComparisonTableProps) {
+export default function ComparisonTable(props: ComparisonTableProps) {
+  const { plans, billingPeriod } = props;
+  
   const getPrice = (monthly: number) =>
     Math.round(monthly * discounts[billingPeriod]);
 

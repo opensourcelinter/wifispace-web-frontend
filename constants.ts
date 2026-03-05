@@ -6,3 +6,5 @@ export const RoutePaths = {
   ABOUT: "/about",
   CONTACT: "/contact",
 };
+
+export const WHATSAPP_HOTLINE = `https://wa.me/+2348144872744`;

@@ -2,34 +2,9 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_HOTLINE } from "@/constants";
 import { motion } from "framer-motion";
-
-const addOns = [
-  {
-    name: "Static IP",
-    price: "₦5,000 / month",
-    description:
-      "Dedicated public IP for remote access, servers, CCTV, or business VPN.",
-    popular: true,
-  },
-  {
-    name: "Mesh WiFi Extender",
-    price: "₦18,000 – ₦35,000 one-time",
-    description:
-      "Eliminate dead zones in large homes, multi-floor apartments, or offices.",
-  },
-  {
-    name: "Speed Boost (Temporary)",
-    price: "₦8,000 – ₦15,000 for 7–30 days",
-    description:
-      "Instant upgrade during peak months, events, or big downloads.",
-  },
-  {
-    name: "Extra Router / Repeater",
-    price: "₦12,000 – ₦25,000 one-time",
-    description: "Extend coverage to every corner of your space.",
-  },
-];
+import addOns from "@/app/data/addOns.json";
 
 export default function AddOnsSection() {
   return (
@@ -94,7 +69,9 @@ export default function AddOnsSection() {
             more.
           </p>
           <Button asChild size="lg" className="rounded-full px-10">
-            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20I%27m%20interested%20in%20add-ons%20for%20my%20plan">
+            <a
+              href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I%27m%20interested%20in%20add-ons%20for%20my%20plan`}
+            >
               Chat on WhatsApp for Custom Options
             </a>
           </Button>

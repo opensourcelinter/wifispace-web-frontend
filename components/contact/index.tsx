@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { WHATSAPP_HOTLINE } from "@/constants";
 import { motion } from "framer-motion";
 import { Clock, Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import { useState } from "react";
@@ -69,7 +70,7 @@ export default function ContactPage() {
                   className="w-full rounded-full bg-green-600 hover:bg-green-700"
                 >
                   <a
-                    href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20I%20need%20help%20with..."
+                    href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I%20need%20help%20with...`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -107,7 +108,9 @@ export default function ContactPage() {
                 <CardTitle className="text-2xl">Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-xl font-medium mb-4">support@WifiSpace.com</p>
+                <p className="text-xl font-medium mb-4">
+                  support@WifiSpace.com
+                </p>
                 <Button
                   variant="outline"
                   size="lg"
@@ -281,7 +284,9 @@ export default function ContactPage() {
           line. Lagos style: fast and friendly.
         </p>
         <Button asChild size="lg" className="rounded-full px-12">
-          <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20I'm%20reaching%20out%20from%20your%20contact%20page">
+          <a
+            href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I'm%20reaching%20out%20from%20your%20contact%20page`}
+          >
             Open WhatsApp Now
           </a>
         </Button>

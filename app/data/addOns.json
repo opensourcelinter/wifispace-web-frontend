@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Static IP",
+        "price": "₦5,000 / month",
+        "description": "Dedicated public IP for remote access, servers, CCTV, or business VPN.",
+        "popular": true
+    },
+    {
+        "name": "Mesh WiFi Extender",
+        "price": "₦18,000 - ₦35,000 one-time",
+        "description": "Eliminate dead zones in large homes, multi-floor apartments, or offices."
+    },
+    {
+        "name": "Speed Boost (Temporary)",
+        "price": "₦8,000 - ₦15,000 for 7-30 days",
+        "description": "Instant upgrade during peak months, events, or big downloads."
+    },
+    {
+        "name": "Extra Router / Repeater",
+        "price": "₦12,000 - ₦25,000 one-time",
+        "description": "Extend coverage to every corner of your space."
+    }
+]

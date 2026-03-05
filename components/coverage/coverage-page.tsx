@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { WHATSAPP_HOTLINE } from "@/constants";
 import { motion } from "framer-motion";
 import { AlertCircle, CheckCircle2, Clock } from "lucide-react";
 import Link from "next/link";
@@ -146,7 +147,6 @@ export default function CoveragePage() {
         </motion.form>
       </section>
 
-      {/* Result Display */}
       {result && (
         <section className="py-12 px-6">
           <motion.div
@@ -188,7 +188,9 @@ export default function CoveragePage() {
                       size="lg"
                       className="rounded-full border-primary text-primary"
                     >
-                      <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20I'm%20in%20${encodeURIComponent(selectedArea || customArea)}">
+                      <a
+                        href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I'm%20in%20${encodeURIComponent(selectedArea || customArea)}`}
+                      >
                         Chat on WhatsApp
                       </a>
                     </Button>
@@ -201,7 +203,9 @@ export default function CoveragePage() {
                     size="lg"
                     className="rounded-full border-primary text-primary"
                   >
-                    <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20please%20update%20me%20when%20coverage%20reaches%20${encodeURIComponent(selectedArea || customArea)}">
+                    <a
+                      href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20please%20update%20me%20when%20coverage%20reaches%20${encodeURIComponent(selectedArea || customArea)}`}
+                    >
                       Join Waitlist / Get Notified
                     </a>
                   </Button>
@@ -360,7 +364,9 @@ export default function CoveragePage() {
             size="lg"
             className="rounded-full px-10 border-primary text-primary"
           >
-            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20coverage%20question">
+            <a
+              href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20coverage%20question`}
+            >
               Chat on WhatsApp
             </a>
           </Button>

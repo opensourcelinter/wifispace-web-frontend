@@ -1,12 +1,13 @@
 "use client";
 
+import { WHATSAPP_HOTLINE } from "@/constants";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppFab() {
   return (
     <motion.a
-      href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20I%20need%20help..."
+      href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I%20need%20help...`}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}
