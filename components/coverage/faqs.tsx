@@ -17,7 +17,9 @@ export default function CoverageFAQS() {
         <Accordion type="single" collapsible className="space-y-4">
           {coverageFaq.map((faq, index) => (
             <AccordionItem value={`${index}`} key={index}>
-              <AccordionTrigger>{faq.request}</AccordionTrigger>
+              <AccordionTrigger className="cursor-pointer">
+                {faq.request}
+              </AccordionTrigger>
               <AccordionContent>{faq.reply}</AccordionContent>
             </AccordionItem>
           ))}
