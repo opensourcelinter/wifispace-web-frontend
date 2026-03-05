@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import ComparisonTable from "./comparison-table";
 import PlanCard from "./plan-card";
+import AddOnsSection from "./addon";
 
 export default function PlansPage() {
   const [billingPeriod, setBillingPeriod] = useState<
@@ -127,6 +128,8 @@ export default function PlansPage() {
       </section>
 
       <ComparisonTable plans={plans} billingPeriod={billingPeriod} />
+
+      <AddOnsSection />
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
