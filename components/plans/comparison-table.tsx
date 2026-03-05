@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Check, X } from "lucide-react";
+import { Check, Laptop, Smartphone, Tv, X } from "lucide-react";
 
 interface ComparisonTableProps {
   plans: typeof plans;
@@ -45,6 +45,26 @@ export default function ComparisonTable({
     { label: "Router Included", key: "router" },
     { label: "Installation Cost", key: "installation" },
     { label: "Support Level", key: "support" },
+    {
+      label: "Recommended Devices",
+      render: (plan: any) => (
+        <div className="flex items-center justify-center gap-1.5">
+          {plan.name === "Pro" ? (
+            <>
+              <Smartphone size={18} /> <Laptop size={18} /> <Tv size={18} />{" "}
+              <span className="font-medium">9+</span>
+            </>
+          ) : plan.name === "Standard" ? (
+            <>
+              <Smartphone size={18} /> <Laptop size={18} />{" "}
+              <span className="font-medium">4-8</span>
+            </>
+          ) : (
+            <span className="font-medium">1–3</span>
+          )}
+        </div>
+      ),
+    },
     {
       label: "Static IP Option",
       render: (plan: any) =>
