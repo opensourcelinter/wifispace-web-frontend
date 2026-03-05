@@ -20,10 +20,7 @@ import { Status } from "./coverage-page";
 export default function CoverageHero() {
   const [selectedArea, setSelectedArea] = useState("");
   const [customArea, setCustomArea] = useState("");
-  const [result, setResult] = useState<null | {
-    status: Status;
-    message: string;
-  }>(null);
+  const [result, setResult] = useState<null | { status: Status; message: string }>(null);
   const [loading, setLoading] = useState(false);
 
   const handleCheck = (e: React.FormEvent) => {
