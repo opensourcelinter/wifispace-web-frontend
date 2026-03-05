@@ -86,32 +86,30 @@ export default function CoverageHero() {
           transition={{ delay: 0.5 }}
           className="max-w-2xl mx-auto space-y-6"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Select value={selectedArea} onValueChange={setSelectedArea}>
-                <SelectTrigger className="h-14 text-lg">
-                  <SelectValue placeholder="Select your area / estate / LGA" />
-                </SelectTrigger>
-                <SelectContent>
-                  {areaOptions.map((opt) => (
-                    <SelectItem key={opt} value={opt}>
-                      {opt}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            {selectedArea === "Other / Specify" && (
-              <Input
-                value={customArea}
-                onChange={(e) => setCustomArea(e.target.value)}
-                placeholder="Type your area / street / estate"
-                className="h-14 text-lg"
-                required
-              />
-            )}
+          <div>
+            <Select value={selectedArea} onValueChange={setSelectedArea}>
+              <SelectTrigger className="h-14 text-lg w-full">
+                <SelectValue placeholder="Select your area / estate / LGA" />
+              </SelectTrigger>
+              <SelectContent>
+                {areaOptions.map((opt) => (
+                  <SelectItem key={opt} value={opt}>
+                    {opt}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
+
+          {selectedArea === "Other / Specify" && (
+            <Input
+              value={customArea}
+              onChange={(e) => setCustomArea(e.target.value)}
+              placeholder="Type your area / street / estate"
+              className="h-14 text-lg"
+              required
+            />
+          )}
 
           <Button
             type="submit"

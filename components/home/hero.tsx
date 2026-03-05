@@ -21,7 +21,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 opacity-25 pointer-events-none">
         <motion.div
-          className="absolute top-16 sm:top-20 left-6 sm:left-10 w-56 sm:w-64 h-56 sm:h-64 bg-primary/5 rounded-full blur-3xl dark:bg-primary/10"
+          className="absolute top-10 sm:top-20 left-6 sm:left-10 w-56 sm:w-64 h-56 sm:h-64 bg-primary/5 rounded-full blur-3xl dark:bg-primary/10"
           animate={{ scale: [1, 1.18, 1], x: [0, 35, 0], y: [0, -25, 0] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
         />
