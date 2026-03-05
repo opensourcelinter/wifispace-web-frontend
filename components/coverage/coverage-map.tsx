@@ -141,7 +141,7 @@ export default function CoverageMap() {
         if (
           feature.geometry.type === "Polygon" ||
           feature.geometry.type === "MultiPolygon"
-        ) {
+        ) { 
           const coords = feature.geometry.coordinates.flat(2);
           for (let i = 0; i < coords.length; i += 2) {
             bounds.extend([coords[i + 1], coords[i]]);
