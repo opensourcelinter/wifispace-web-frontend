@@ -1,39 +1,16 @@
 "use client";
 
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
+import { cardVariants, containerVariants } from "@/animations/why-choose-us";
 import whyChooseUs from "@/app/data/why-choose-us.json";
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 35 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.12 + 0.4,
-      duration: 0.65,
-      ease: "easeOut",
-    },
-  }),
-};
 
 export default function WhyChoose() {
   return (

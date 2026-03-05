@@ -106,7 +106,7 @@ export default function FeaturedPlans({ plans }: Props) {
                   `}
                 >
                   {isPopular && (
-                    <div className="absolute inset-x-0 top-0 flex justify-center pointer-events-none">
+                    <div className="absolute inset-x-0 top-2 flex justify-center pointer-events-none">
                       <Badge className="relative -mt-3.5 bg-primary text-primary-foreground px-5 py-1.5 text-sm font-semibold shadow-lg">
                         Most Popular
                       </Badge>
@@ -133,11 +133,11 @@ export default function FeaturedPlans({ plans }: Props) {
                       {billing === "annual" ? (
                         <>
                           ₦{plan.monthlyPrice.toLocaleString()} billed once per
-                          year – save 15%
+                          year - save 15%
                         </>
                       ) : (
                         <>
-                          ₦{plan.monthlyPrice.toLocaleString()} per month – no
+                          ₦{plan.monthlyPrice.toLocaleString()} per month - no
                           long-term lock-in
                         </>
                       )}
