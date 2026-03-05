@@ -1,0 +1,58 @@
+[
+    {
+        "request": "How do I check if your internet service is available in my area?",
+        "reply": "Enter your full address or estate name in our coverage checker tool. It shows real-time availability for Ikeja, Lekki, Yaba, Gbagada, Victoria Island, Surulere, and many other areas. If your location isn't listed yet, join the waitlist — we expand weekly!"
+    },
+    {
+        "request": "Which parts of Lagos do you currently cover?",
+        "reply": "We actively serve key zones including Ikeja, Lekki Phase 1 & 2, Victoria Island, Ikoyi, Yaba, Surulere, Gbagada, Maryland, Ojodu-Berger, Magodo, and several estates in Ajah, Lekki-Epe Expressway corridor, and parts of the Mainland. New estates are added monthly — check the interactive map or coverage tool for your exact street/estate."
+    },
+    {
+        "request": "Do you cover my estate/gated community?",
+        "reply": "Many estates require management approval or right-of-way access. If your estate isn't on our coverage list yet, submit your estate name via the form below. We're actively partnering with estate managements across Lagos — approval usually takes 2-6 weeks."
+    },
+    {
+        "request": "What if my street or area is not yet covered?",
+        "reply": "Join our waitlist! We prioritize expansion based on demand. Areas with 15+ sign-ups move much faster. You can also refer neighbors — we offer referral credits when groups in the same area sign up together."
+    },
+    {
+        "request": "How long does it take to expand coverage to a new area or estate?",
+        "reply": "Once we receive enough interest (usually 10-20 households/businesses), survey & planning takes 2-4 weeks, trenching/fiber deployment 4-10 weeks (depending on estate approvals and permissions). Average time from waitlist to first activations: 2-4 months in high-demand Lagos zones."
+    },
+    {
+        "request": "Is your coverage affected by power outages in Lagos?",
+        "reply": "Our core network uses power backups (inverters + generators) at base stations and major nodes. However, the final connection to your home depends on your building's power situation. We recommend customers use UPS/inverters for the router — most customers maintain connectivity during short outages."
+    },
+    {
+        "request": "Do you offer service in multi-storey buildings or high-rises?",
+        "reply": "Yes — we install in many apartments, penthouses, and office buildings in Lagos. Coverage depends on line-of-sight (for wireless) or fiber riser access (for FTTH). Our team conducts a free site survey to confirm signal strength or fiber feasibility."
+    },
+    {
+        "request": "What kind of Wi-Fi coverage can I expect inside my home/house?",
+        "reply": "Our standard router covers ~1,500-2,000 sq ft in open spaces. Thick walls, multiple floors, or metal structures can reduce range. We offer free signal assessment during installation and optional mesh Wi-Fi extenders for whole-home coverage (very popular in duplexes and large compounds)."
+    },
+    {
+        "request": "Can I get service if I live near your covered area but not directly inside it?",
+        "reply": "Possibly — we sometimes extend coverage 200-500 meters beyond current zones during expansions. Submit your address for a free feasibility check. We'll let you know if we can reach your location without major extra infrastructure."
+    },
+    {
+        "request": "Do you cover commercial areas, small offices, or shops?",
+        "reply": "Yes — we serve SMEs, co-working spaces, cafes, clinics, and small offices in covered zones. Business plans offer higher upload speeds and static IPs where needed. Contact our business team for a site survey."
+    },
+    {
+        "request": "How accurate is your coverage map / checker tool?",
+        "reply": "The map is updated weekly based on active infrastructure. It shows “green = service available now”, “yellow = coming soon / waitlist open”, “gray = not yet planned”. Final confirmation always comes after a free site survey (we confirm signal or fiber reach)."
+    },
+    {
+        "request": "What happens if coverage changes or gets better in my area after I sign up?",
+        "reply": "We continuously upgrade — many customers get free speed upgrades when we bring fiber closer or improve the network. You keep your plan price (no mid-contract increases)."
+    },
+    {
+        "request": "Do I need approval from my estate, landlord, or NEPA before installation?",
+        "reply": "In most estates — yes (written permission from management). In rented apartments — landlord consent is usually required. Our team helps coordinate approvals and provides official letters. No trenching happens without permission."
+    },
+    {
+        "request": "Is there any cost if my area is not covered yet but I join the waitlist?",
+        "reply": "No — joining the waitlist is 100% free and non-binding. You only pay when service is available and you decide to proceed with installation."
+    }
+]
