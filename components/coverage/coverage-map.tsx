@@ -123,7 +123,7 @@ const getFillColor = (status: string) => {
     case "coming_soon":
       return "#eab308";
     case "not_covered":
-      return "#ef4444"; 
+      return "#ef4444";  
     default:
       return "#9ca3af";
   }
