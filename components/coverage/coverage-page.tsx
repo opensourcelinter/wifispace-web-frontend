@@ -132,7 +132,7 @@ export default function CoveragePage() {
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            placeholder="Phone number (for faster follow-up – optional)"
+            placeholder="Phone number (for faster follow-up = optional)"
             className="h-14 text-lg"
           />
 

@@ -2,55 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { WHATSAPP_HOTLINE } from "@/constants";
-import { motion } from "framer-motion";
 import { Clock, Mail, MapPin, MessageSquare, Phone } from "lucide-react";
-import { useState } from "react";
+import ContactForm from "./contact-form";
+import ContactCTA from "./cta";
+import ContactHero from "./hero";
 
 export default function ContactPage() {
-  const [formStatus, setFormStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormStatus("submitting");
-
-    setTimeout(() => {
-      setFormStatus("success");
-    }, 1500);
-  };
-
   return (
     <main className="min-h-screen bg-light">
-      <section className="bg-linear-to-br from-primary/10 to-secondary/5 py-20 md:py-32 text-center px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-dark"
-        >
-          Get in Touch
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-10"
-        >
-          We're a Lagos team — reach us fast on WhatsApp, call, or fill the form
-          below. We're here to help.
-        </motion.p>
-      </section>
+      <ContactHero />
 
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
@@ -88,7 +49,7 @@ export default function ContactPage() {
                 <CardTitle className="text-2xl">Call Us</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold mb-2">+234 XXX XXX XXXX</p>
+                <p className="text-2xl font-bold mb-2">+234 814 487 2744</p>
                 <p className="text-lg mb-4">Lagos lines</p>
                 <Button
                   variant="outline"
@@ -129,7 +90,9 @@ export default function ContactPage() {
                 <CardTitle className="text-2xl">Visit Us</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg mb-2">[Your Office Address]</p>
+                <p className="text-lg mb-2">
+                  7 Tijani Street, Magbon, Lagos 102212, Lagos
+                </p>
                 <p className="text-sm text-gray-600 mb-4">Lagos, Nigeria</p>
                 <Button
                   variant="outline"
@@ -142,111 +105,7 @@ export default function ContactPage() {
             </Card>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <Card>
-              <CardHeader className="text-center">
-                <CardTitle className="text-3xl">Send Us a Message</CardTitle>
-                <p className="text-gray-600 mt-2">
-                  We'll get back to you as soon as possible (WhatsApp is
-                  fastest!)
-                </p>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Full Name *
-                      </label>
-                      <Input
-                        required
-                        placeholder="Your name"
-                        className="h-12"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Phone Number *
-                      </label>
-                      <Input
-                        required
-                        type="tel"
-                        placeholder="+234 XXX XXX XXXX"
-                        className="h-12"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Email (optional)
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Subject
-                    </label>
-                    <Select>
-                      <SelectTrigger className="h-12">
-                        <SelectValue placeholder="Choose enquiry type" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="new">
-                          New Connection / Coverage
-                        </SelectItem>
-                        <SelectItem value="billing">
-                          Billing / Payment
-                        </SelectItem>
-                        <SelectItem value="support">
-                          Technical Support
-                        </SelectItem>
-                        <SelectItem value="business">
-                          Business / Estate Enquiry
-                        </SelectItem>
-                        <SelectItem value="general">
-                          General Question
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Message *
-                    </label>
-                    <Textarea
-                      required
-                      placeholder="Tell us how we can help..."
-                      className="min-h-30"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    disabled={formStatus === "submitting"}
-                    className="w-full rounded-full text-lg cursor-pointer"
-                  >
-                    {formStatus === "submitting"
-                      ? "Sending..."
-                      : "Send Message"}
-                  </Button>
-
-                  {formStatus === "success" && (
-                    <p className="text-center text-green-600 font-medium mt-4">
-                      Thank you! We'll get back to you soon.
-                    </p>
-                  )}
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+          <ContactForm />
         </div>
       </section>
 
@@ -275,22 +134,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 text-center px-6 bg-primary/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          We're Just a Message Away
-        </h2>
-        <p className="text-xl mb-10 max-w-3xl mx-auto text-gray-700">
-          Whether it's a quick question or a full setup enquiry — drop us a
-          line. Lagos style: fast and friendly.
-        </p>
-        <Button asChild size="lg" className="rounded-full px-12">
-          <a
-            href={`${WHATSAPP_HOTLINE}?text=Hi%20WifiSpace%2C%20I'm%20reaching%20out%20from%20your%20contact%20page`}
-          >
-            Open WhatsApp Now
-          </a>
-        </Button>
-      </section>
+      <ContactCTA />
     </main>
   );
 }
