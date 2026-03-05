@@ -65,7 +65,7 @@ export default function MobileMenu({
               asChild
             >
               <a
-                href="https://wa.me/234XXXXXXXXXX?text=Hi%20Wifibase"
+                href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace"
                 target="_blank"
                 rel="noopener noreferrer"
               >

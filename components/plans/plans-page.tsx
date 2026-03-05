@@ -190,7 +190,7 @@ export default function PlansPage() {
             size="lg"
             className="text-lg rounded-full px-10 border-primary text-primary"
           >
-            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Wifibase%2C%20help%20me%20choose%20a%20plan">
+            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20help%20me%20choose%20a%20plan">
               Chat on WhatsApp
             </a>
           </Button>

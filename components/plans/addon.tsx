@@ -94,7 +94,7 @@ export default function AddOnsSection() {
             more.
           </p>
           <Button asChild size="lg" className="rounded-full px-10">
-            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Wifibase%2C%20I%27m%20interested%20in%20add-ons%20for%20my%20plan">
+            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20I%27m%20interested%20in%20add-ons%20for%20my%20plan">
               Chat on WhatsApp for Custom Options
             </a>
           </Button>

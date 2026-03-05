@@ -56,7 +56,7 @@ export default function Navbar() {
               W
             </div>
             <span className="text-2xl font-bold text-primary hidden sm:block">
-              Wifibase
+              WifiSpace
             </span>
           </Link>
 

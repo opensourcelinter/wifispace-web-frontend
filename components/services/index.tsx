@@ -207,7 +207,7 @@ export default function ServicesPage() {
             size="lg"
             className="rounded-full px-10 border-primary text-primary"
           >
-            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Wifibase%2C%20tell%20me%20about%20your%20services">
+            <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20WifiSpace%2C%20tell%20me%20about%20your%20services">
               Chat on WhatsApp
             </a>
           </Button>
