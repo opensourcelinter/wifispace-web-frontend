@@ -146,12 +146,6 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
-              <Link
-                href="/acceptable-use"
-                className="hover:text-primary transition-colors"
-              >
-                Acceptable Use Policy
-              </Link>
             </nav>
           </div>
         </div>
