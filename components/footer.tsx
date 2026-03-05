@@ -12,7 +12,11 @@ import Link from "next/link";
 
 const currentYear = new Date().getFullYear();
 
-export default function Footer() {
+interface Props {
+  route: { href: string; title: string }[];
+}
+
+export default function Footer({ route }: Props) {
   return (
     <footer className="bg-neutral-950 text-neutral-300 py-16 md:py-20 border-t border-neutral-800">
       <div className="container max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -40,20 +44,13 @@ export default function Footer() {
               Quick Links
             </h4>
             <nav className="flex flex-col space-y-3 text-neutral-400">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/coverage", label: "Coverage Checker" },
-                { href: "/plans", label: "Plans & Pricing" },
-                { href: "/services", label: "Services" },
-                { href: "/about", label: "About Us" },
-                { href: "/contact", label: "Contact" },
-              ].map((item) => (
+              {route.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="hover:text-primary transition-colors duration-200"
+                  className="hover:text-muted-foreground transition-colors duration-200"
                 >
-                  {item.label}
+                  {item.title}
                 </Link>
               ))}
             </nav>
@@ -65,24 +62,24 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col space-y-4 text-neutral-400">
               <a
-                href="https://wa.me/234XXXXXXXXXX"
-                className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
+                href="https://wa.me/+2348144872744"
+                className="flex items-center gap-2 hover:text-muted-foreground transition-colors duration-200"
               >
                 <MessageCircle className="h-5 w-5 text-green-500" />
                 WhatsApp Support
               </a>
 
               <a
-                href="tel:+234XXXXXXXXXX"
-                className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
+                href="tel:+2348144872744"
+                className="flex items-center gap-2 hover:text-muted-foreground transition-colors duration-200"
               >
                 <Phone className="h-5 w-5" />
-                +234 XXX XXX XXXX
+                +234 814 487 2744
               </a>
 
               <a
                 href="mailto:support@wifispace.com"
-                className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
+                className="flex items-center gap-2 hover:text-muted-foreground transition-colors duration-200"
               >
                 <Mail className="h-5 w-5" />
                 support@wifispace.com
@@ -90,7 +87,7 @@ export default function Footer() {
 
               <Link
                 href="/support"
-                className="hover:text-primary transition-colors duration-200"
+                className="hover:text-muted-foreground transition-colors duration-200"
               >
                 Help Center / FAQ
               </Link>
@@ -107,7 +104,7 @@ export default function Footer() {
                 href="https://twitter.com/WifiSpace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 hover:text-primary transition-colors duration-200"
+                className="text-neutral-400 hover:text-muted-foreground transition-colors duration-200"
                 aria-label="Twitter"
               >
                 <Twitter className="h-6 w-6" />
@@ -117,7 +114,7 @@ export default function Footer() {
                 href="https://instagram.com/WifiSpace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 hover:text-primary transition-colors duration-200"
+                className="text-neutral-400 hover:text-muted-foreground transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <Instagram className="h-6 w-6" />
@@ -127,7 +124,7 @@ export default function Footer() {
                 href="https://facebook.com/WifiSpaceinternet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 hover:text-primary transition-colors duration-200"
+                className="text-neutral-400 hover:text-muted-foreground transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <Facebook className="h-6 w-6" />
@@ -137,13 +134,13 @@ export default function Footer() {
             <nav className="flex flex-col space-y-2 text-sm text-neutral-500">
               <Link
                 href="/privacy"
-                className="hover:text-primary transition-colors"
+                className="hover:text-muted-foreground transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="hover:text-primary transition-colors"
+                className="hover:text-muted-foreground transition-colors"
               >
                 Terms of Service
               </Link>

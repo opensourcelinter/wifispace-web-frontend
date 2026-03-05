@@ -119,7 +119,7 @@ export default function CoverageCheck() {
           <Button
             type="submit"
             size="lg"
-            className="w-full h-12 text-base sm:text-lg font-medium"
+            className="w-full h-12 text-base sm:text-lg font-medium cursor-pointer"
             disabled={loading || !query.trim()}
           >
             {loading ? (

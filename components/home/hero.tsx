@@ -92,7 +92,7 @@ export default function Hero() {
         >
           Unlimited plans starting from{" "}
           <span className="font-semibold text-primary whitespace-nowrap">
-            ₦4,999/month
+            ₦14,999/month
           </span>{" "}
           • No throttling • Free installation on select plans • 24/7 local
           support
