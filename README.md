@@ -1,3 +1,3 @@
 ## Introduction
 
-Wifispace Internet Service
+Wifispace Internet Service Provider
