@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Starter",
+        "speed": "Up to 20Mbps",
+        "price": 12000,
+        "features": [
+            "Unlimited data (fair usage)",
+            "Suitable for browsing & HD streaming",
+            "24/7 support",
+            "Free modem on 6-month commitment"
+        ],
+        "popular": false
+    },
+    {
+        "name": "Standard",
+        "speed": "Up to 50Mbps",
+        "price": 22000,
+        "features": [
+            "Truly unlimited data",
+            "Perfect for families & remote work",
+            "Free high-performance router",
+            "Priority support",
+            "Free installation"
+        ],
+        "popular": true
+    },
+    {
+        "name": "Pro",
+        "speed": "Up to 100Mbps+",
+        "price": 38000,
+        "features": [
+            "Ultra-fast unlimited speeds",
+            "Multiple devices & 4K streaming",
+            "Static IP option",
+            "Dedicated account manager",
+            "Free premium router & setup"
+        ],
+        "popular": false
+    }
+]
