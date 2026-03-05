@@ -1,40 +1,68 @@
 [
     {
         "name": "Starter",
-        "speed": "Up to 20Mbps",
-        "price": 12000,
+        "monthlyPrice": 14999,
+        "speed": "Up to 25Mbps down / 10Mbps up",
+        "bestFor": "Browsing, social media, light streaming (1-2 devices)",
         "features": [
-            "Unlimited data (fair usage)",
-            "Suitable for browsing & HD streaming",
-            "24/7 support",
-            "Free modem on 6-month commitment"
+            "Unlimited data (fair usage policy)",
+            "Basic 24/7 support",
+            "Modem rental included",
+            "Installation ₦20,000 (waived on annual)",
+            "No throttling on everyday use"
         ],
-        "popular": false
+        "popular": false,
+        "downloadSpeed": "25Mbps",
+        "uploadSpeed": "10Mbps",
+        "dataPolicy": "Unlimited (fair usage)",
+        "router": "Basic modem (rental)",
+        "installation": "₦20,000 (waived annual)",
+        "support": "Standard",
+        "staticIP": "No",
+        "addOns": "Limited"
     },
     {
         "name": "Standard",
-        "speed": "Up to 50Mbps",
-        "price": 22000,
+        "monthlyPrice": 24999,
+        "speed": "Up to 50Mbps down / 20Mbps up",
+        "bestFor": "Families, remote work, HD/4K streaming (4+ devices)",
         "features": [
-            "Truly unlimited data",
-            "Perfect for families & remote work",
-            "Free high-performance router",
-            "Priority support",
-            "Free installation"
+            "Unlimited data (fair usage policy)",
+            "Basic 24/7 support",
+            "Modem rental included",
+            "Installation ₦20,000 (waived on annual)",
+            "No throttling on everyday use"
         ],
-        "popular": true
+        "popular": true,
+        "downloadSpeed": "50Mbps",
+        "uploadSpeed": "20Mbps",
+        "dataPolicy": "Truly unlimited",
+        "router": "Free high-performance router",
+        "installation": "Free",
+        "support": "Priority",
+        "staticIP": "Add-on available",
+        "addOns": "Full access"
     },
     {
         "name": "Pro",
-        "speed": "Up to 100Mbps+",
-        "price": 38000,
+        "monthlyPrice": 39999,
+        "speed": "Up to 100Mbps+ down / 30Mbps+ up",
+        "bestFor": "Heavy users, small offices, gaming",
         "features": [
-            "Ultra-fast unlimited speeds",
-            "Multiple devices & 4K streaming",
-            "Static IP option",
-            "Dedicated account manager",
-            "Free premium router & setup"
+            "Unlimited data (fair usage policy)",
+            "Basic 24/7 support",
+            "Modem rental included",
+            "Installation ₦20,000 (waived on annual)",
+            "No throttling on everyday use"
         ],
-        "popular": false
+        "popular": false,
+        "downloadSpeed": "100Mbps+",
+        "uploadSpeed": "30Mbps+",
+        "dataPolicy": "Truly unlimited",
+        "router": "Free premium router + mesh option",
+        "installation": "Free",
+        "support": "Dedicated line",
+        "staticIP": "Add-on available",
+        "addOns": "Full access"
     }
 ]

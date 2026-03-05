@@ -4,31 +4,23 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useState } from "react";
 
+import plans from "@/app/data/plans.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 type BillingPeriod = "monthly" | "annual";
 
-interface Plan {
-  name: string;
-  price: number;
-  speed: string;
-  features: string[];
-  popular?: boolean;
-  slug?: string;
-}
-
 interface Props {
-  plans: Plan[];
+  plans: typeof plans;
 }
 
 export default function FeaturedPlans({ plans }: Props) {
@@ -89,7 +81,9 @@ export default function FeaturedPlans({ plans }: Props) {
           {plans.map((plan, index) => {
             const isPopular = plan.popular;
             const displayPrice =
-              billing === "annual" ? Math.round(plan.price * 0.85) : plan.price;
+              billing === "annual"
+                ? Math.round(plan.monthlyPrice * 0.85)
+                : plan.monthlyPrice;
 
             return (
               <motion.div
@@ -138,12 +132,12 @@ export default function FeaturedPlans({ plans }: Props) {
                     <div className="mt-2 text-sm text-muted-foreground">
                       {billing === "annual" ? (
                         <>
-                          ₦{plan.price.toLocaleString()} billed once per year –
-                          save 15%
+                          ₦{plan.monthlyPrice.toLocaleString()} billed once per
+                          year – save 15%
                         </>
                       ) : (
                         <>
-                          ₦{plan.price.toLocaleString()} per month – no
+                          ₦{plan.monthlyPrice.toLocaleString()} per month – no
                           long-term lock-in
                         </>
                       )}
