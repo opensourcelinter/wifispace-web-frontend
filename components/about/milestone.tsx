@@ -3,55 +3,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-
-const stats = [
-  {
-    number: "500+",
-    label: "Happy Customers",
-    desc: "Lagosians trusting WifiSpace for daily connectivity",
-  },
-  {
-    number: "4+",
-    label: "Key Lagos Zones Covered",
-    desc: "Ikeja, Lekki, Yaba, Gbagada — with more estates on the way",
-  },
-  {
-    number: "99.9%",
-    label: "Network Uptime",
-    desc: "Consistent performance, even during peak hours and power challenges",
-  },
-  {
-    number: "48-72 hrs",
-    label: "Average Setup Time",
-    desc: "Fast activation once coverage is confirmed",
-  },
-  {
-    number: "100%+",
-    label: "Customer Growth (Last Year)",
-    desc: "Word-of-mouth and reliable service driving rapid expansion",
-  },
-];
-
-const milestones = [
-  {
-    year: "2024",
-    event: "WifiSpace founded in Lagos to solve real connectivity problems",
-  },
-  {
-    year: "2025",
-    event:
-      "Launched first plans in Ikeja and Lekki — hundreds of early subscribers",
-  },
-  {
-    year: "2026",
-    event: "Expanded to Yaba & Gbagada — committed to more Lagos coverage",
-  },
-  {
-    year: "Today",
-    event:
-      "Proudly serving homes, remote workers, and small businesses across the city",
-  },
-];
+import stats from "@/app/data/stats.json";
+import milestones from "@/app/data/milestones.json";
 
 export default function MilestonesStats() {
   return (
