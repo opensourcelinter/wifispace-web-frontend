@@ -1,37 +1,13 @@
 "use client";
 
+import {
+  badgeVariants,
+  containerVariants,
+  itemVariants,
+} from "@/animations/hero";
 import { Button } from "@/components/ui/button";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.18,
-      delayChildren: 0.25,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 32 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.75, ease: "easeOut" },
-  },
-};
-
-const badgeVariants: Variants = {
-  hidden: { scale: 0.85, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: { duration: 0.55, type: "spring", stiffness: 130, damping: 14 },
-  },
-};
 
 export default function Hero() {
   return (
