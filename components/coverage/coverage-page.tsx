@@ -4,11 +4,21 @@ import coveredAreas from "@/app/data/areas/covered-areas.json";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_HOTLINE } from "@/constants";
 import { CheckCircle2 } from "lucide-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import CoverageIndicator from "./coverage-indicator";
 import CoverageFAQS from "./faqs";
 import CoverageHero from "./hero";
 
 export type Status = "available" | "pending" | "unavailable";
+
+const CoverageMapPreview = dynamic(
+  () => import("@/components/coverage/coverage-map"),
+  {
+    ssr: false,
+    loading: () => <p>Loading map...</p>,
+  },
+);
 
 export default function CoveragePage() {
   return (
@@ -20,14 +30,9 @@ export default function CoveragePage() {
             Our Current Coverage in Lagos
           </h2>
 
-          <div className="aspect-4/3 bg-gray-50 rounded-xl overflow-hidden border shadow-inner">
-            {/* Map functionality & preview here... */}
-          </div>
+          <CoverageMapPreview />
 
-          <p className="text-center mt-6 text-gray-600">
-            Hover or tap areas to see coverage status (green = currently
-            available).
-          </p>
+          <CoverageIndicator />
         </div>
       </section>
 

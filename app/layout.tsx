@@ -1,7 +1,9 @@
+import Layout from "@/layout/Layout";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
-import Layout from "@/layout/Layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
